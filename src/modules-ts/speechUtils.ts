@@ -1,3 +1,15 @@
+const synth = window.speechSynthesis;
+
+synth.onvoiceschanged = () => {
+	voices = synth.getVoices().filter((voice) => voice.lang.startsWith("en"));
+	console.log(
+		"voices are ready",
+		voices.map((v) => v.name),
+	);
+};
+
+let voices: SpeechSynthesisVoice[] = [];
+
 export interface CreateUtteranceOptions {
 	lang?: string;
 	pitch?: number;
@@ -40,5 +52,8 @@ export function createUtterance(
 }
 
 export function speak(utterance: SpeechSynthesisUtterance) {
-	speechSynthesis.speak(utterance);
+	const voiceIdx = Math.floor(Math.random() * voices.length);
+	const voice = voices[voiceIdx] || null;
+	utterance.voice = voice;
+	synth.speak(utterance);
 }

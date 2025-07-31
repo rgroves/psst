@@ -24,7 +24,7 @@ export function createUtterance(
 		);
 	};
 
-	utterance.onend = function (event: SpeechSynthesisEvent): any {
+	utterance.onend = function (event: SpeechSynthesisEvent) {
 		console.debug(`Spoke: ${event.utterance.text}, duration: ${event.elapsedTime} seconds`);
 	};
 

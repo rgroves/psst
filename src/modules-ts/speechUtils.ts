@@ -10,7 +10,13 @@ export function createUtterance(
 	text: string,
 	opts: CreateUtteranceOptions | undefined = {},
 ): SpeechSynthesisUtterance {
-	const { lang = 'en-US', pitch = 1, volume = 1, voice = null, rate = 1} = opts;
+	const {
+		lang = "en-US",
+		pitch = 1,
+		volume = 1,
+		voice = null,
+		rate = 1,
+	} = opts;
 	const utterance = new SpeechSynthesisUtterance(text);
 	utterance.lang = lang;
 	utterance.pitch = pitch;
@@ -25,7 +31,9 @@ export function createUtterance(
 	};
 
 	utterance.onend = function (event: SpeechSynthesisEvent) {
-		console.debug(`Spoke: ${event.utterance.text}, duration: ${event.elapsedTime} seconds`);
+		console.debug(
+			`Spoke: ${event.utterance.text}, duration: ${event.elapsedTime} seconds`,
+		);
 	};
 
 	return utterance;

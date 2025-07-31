@@ -1,0 +1,31 @@
+---
+
+---
+
+<script>
+	function speak(text: string) {
+		const utterance = new SpeechSynthesisUtterance(text);
+		utterance.rate = 1;
+		utterance.volume = 1;
+
+		utterance.onerror = (event) => {
+			console.error(
+				`An error has occurred with the speech synthesis: ${event.error}`,
+			);
+		};
+
+		utterance.onend = () => {
+			console.debug(`Spoke: ${text}`);
+		};
+		speechSynthesis.speak(utterance);
+	}
+
+	window.addEventListener("DOMContentLoaded", () => {
+		const button = document.createElement("button");
+		button.textContent = "Speak";
+		button.addEventListener("click", () => {
+			speak("Hello, this is a test of the speech synthesis feature.");
+		});
+		document.body.appendChild(button);
+	});
+</script>

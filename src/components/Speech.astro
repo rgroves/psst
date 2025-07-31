@@ -3,29 +3,17 @@
 ---
 
 <script>
-	function speak(text: string) {
-		const utterance = new SpeechSynthesisUtterance(text);
-		utterance.rate = 1;
-		utterance.volume = 1;
+	import { createUtterance, speak } from "src/modules-ts/speechUtils";
 
-		utterance.onerror = (event) => {
-			console.error(
-				`An error has occurred with the speech synthesis: ${event.error}`,
-			);
-		};
-
-		utterance.onend = () => {
-			console.debug(`Spoke: ${text}`);
-		};
-		speechSynthesis.speak(utterance);
-	}
+	const helloUtterance = createUtterance("Hello, world!");
 
 	window.addEventListener("DOMContentLoaded", () => {
 		const button = document.createElement("button");
 		button.textContent = "Speak";
 		button.addEventListener("click", () => {
-			speak("Hello, this is a test of the speech synthesis feature.");
+			speak(helloUtterance);
 		});
+
 		document.body.appendChild(button);
 	});
 </script>

@@ -3,17 +3,35 @@
 ---
 
 <script>
-	import { createUtterance, speak } from "src/modules-ts/speechUtils";
+	import { encodedSpeechData } from "src/modules-ts/speechData";
+	import {
+		createUtterance,
+		speakAtRandomInterval,
+	} from "src/modules-ts/speechUtils";
 
-	const helloUtterance = createUtterance("Hello, world!");
+	const wat = document.getElementById("wat");
+
+	const utterances = encodedSpeechData.map((t, idx) => {
+		const rate = 1 - idx * (0.75 / encodedSpeechData.length);
+		const utterance = createUtterance(atob(t), { rate });
+		return utterance;
+	});
 
 	window.addEventListener("DOMContentLoaded", () => {
 		const button = document.createElement("button");
-		button.textContent = "Speak";
+		button.textContent = "🙈";
+		button.style.position = "absolute";
+		button.style.top = "10px";
+		button.style.right = "10px";
 		button.addEventListener("click", () => {
-			speak(helloUtterance);
+			document.body.removeChild(button);
+			if (wat) {
+				wat.remove();
+			}
+			setTimeout(() => {
+				speakAtRandomInterval(utterances);
+			}, 60 * 1000);
 		});
-
 		document.body.appendChild(button);
 	});
 </script>

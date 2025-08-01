@@ -43,6 +43,22 @@ import Speech from "@components/Speech.astro";
 				font-size: 1.5rem;
 				font-weight: bolder;
 			}
+			#wat {
+				position: absolute;
+				top: 10px;
+				left: 0;
+				background-color: #f0f0f0;
+				padding: 0.15rem;
+				border-radius: 0.5rem;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+				margin: 0 auto;
+				max-width: 65ch;
+				cursor: pointer;
+				& div {
+					margin: 0;
+					padding: 1rem;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -130,5 +146,42 @@ import Speech from "@components/Speech.astro";
 		</main>
 
 		<Speech />
+		<details id="wat">
+			<summary>❓</summary>
+			<div>
+				<h3>The Wat?</h3>
+				This page is meant to be midly humorous or mildly annoying, depending on
+				if you're the one hitting the see no evil button 🙈 or not.
+				<h3>Instructions</h3>
+				<ul>
+					<li>
+						Find a person in your life who has both:
+						<br />1) too many tabs open
+						<br />2) left their computer unlocked (tsk-tsk!)
+					</li>
+					<li>
+						Create a new tab and navigate to this page (or pull this page up in
+						a browser located in a secondary desktop window)
+					</li>
+					<li>
+						Click the 🙈 (see no evil) button that should be floating in the top
+						right corner.
+					</li>
+					<li>Shuffle this tab somewhere into the sea of other open tabs.</li>
+					<li>
+						Switch to their previously open tab (or switch back to their primary
+						desktop window).
+					</li>
+					<li>Make sure their volume is not muted.</li>
+					<li>
+						Walk away - after a minute their browser will begin to speak short
+						phrases at random intervals (every 15-60 seconds), starting with
+						"Psst! Hey!", and then begin its descent into madness.
+					</li>
+					<li>???</li>
+					<li>Profit!</li>
+				</ul>
+			</div>
+		</details>
 	</body>
 </html>

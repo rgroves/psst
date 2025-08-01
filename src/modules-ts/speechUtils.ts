@@ -2,7 +2,7 @@
 //       see: https://codersblock.com/blog/javascript-text-to-speech-and-its-many-quirks/
 
 const MIN_INTERVAL_MILLISECONDS = 15 * 1000;
-const MAX_INTERVAL_MILLISECONDS = 30 * 1000;
+const MAX_INTERVAL_MILLISECONDS = 60 * 1000;
 const RESET_INTERVAL_MILLISECONDS = 10 * 60 * 1000;
 
 const synth = window.speechSynthesis;

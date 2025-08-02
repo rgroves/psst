@@ -1,43 +1,19 @@
-# Astro Starter Kit: Minimal
+# Psst!
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+Have you ever walked by a computer that has been left unlocked and unattended? Do you want to teach the person who left it unlocked a valuable lesson, while also maybe making them question their sanity? If so, you've come to the right place!
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## What is this?
 
-## 🚀 Project Structure
+This is a simple web page that, with the click of a button, will start whispering sweet (and slightly unhinged) nothings into the ear of an unsuspecting user at random intervals. It's a prank, a joke, and a public service announcement all rolled into one.
 
-Inside of your Astro project, you'll see the following folders and files:
+## The Mission (Should You Choose to Accept It):
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1.  Find an unlocked, unattended computer.
+2.  Open [this page](https://digitalsolitude.com/labs/psst/) in a new tab.
+3.  Click the 🙈 button in the top right.
+4.  Hide the tab and walk away cooly.
+5.  Listen for the "Psst! Hey!" from a safe distance and enjoy the ensuing confusion.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## The Moral of the Story
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Always lock your computer when you walk away from it. You never know what might be lurking in the shadows, waiting to speak to you.

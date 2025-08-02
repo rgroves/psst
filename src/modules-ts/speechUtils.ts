@@ -1,7 +1,7 @@
 // NOTE: When it comes to the Web Speech API, things are still a bit quirky:
 //       see: https://codersblock.com/blog/javascript-text-to-speech-and-its-many-quirks/
 
-const MIN_INTERVAL_MILLISECONDS = 15 * 1000;
+const MIN_INTERVAL_MILLISECONDS = 30 * 1000;
 const MAX_INTERVAL_MILLISECONDS = 60 * 1000;
 const RESET_INTERVAL_MILLISECONDS = 10 * 60 * 1000;
 
